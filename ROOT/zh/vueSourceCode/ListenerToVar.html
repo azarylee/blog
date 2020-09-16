@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>监听数据变化 | 阿木林的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小菜鸟">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="author" content="Yijun <liyijun430.com>">
+    <link rel="preload" href="/assets/css/0.styles.ee8340de.css" as="style"><link rel="preload" href="/assets/js/app.da8be8ea.js" as="script"><link rel="preload" href="/assets/js/2.ddb1122e.js" as="script"><link rel="preload" href="/assets/js/42.9bb9972e.js" as="script"><link rel="prefetch" href="/assets/js/10.f82c1746.js"><link rel="prefetch" href="/assets/js/11.b19841a5.js"><link rel="prefetch" href="/assets/js/12.05213fd2.js"><link rel="prefetch" href="/assets/js/13.15e89dd7.js"><link rel="prefetch" href="/assets/js/14.8f6c383f.js"><link rel="prefetch" href="/assets/js/15.4576b73e.js"><link rel="prefetch" href="/assets/js/16.fb54c248.js"><link rel="prefetch" href="/assets/js/17.f308c0d3.js"><link rel="prefetch" href="/assets/js/18.ef35d2e1.js"><link rel="prefetch" href="/assets/js/19.4420e2c4.js"><link rel="prefetch" href="/assets/js/20.c65be6eb.js"><link rel="prefetch" href="/assets/js/21.acf9b508.js"><link rel="prefetch" href="/assets/js/22.072b2d35.js"><link rel="prefetch" href="/assets/js/23.9938e155.js"><link rel="prefetch" href="/assets/js/24.ddf82dc3.js"><link rel="prefetch" href="/assets/js/25.63675316.js"><link rel="prefetch" href="/assets/js/26.3536f4c8.js"><link rel="prefetch" href="/assets/js/27.df548c77.js"><link rel="prefetch" href="/assets/js/28.fbd1b08b.js"><link rel="prefetch" href="/assets/js/29.f73fc9dd.js"><link rel="prefetch" href="/assets/js/3.b0754abc.js"><link rel="prefetch" href="/assets/js/30.a19015f4.js"><link rel="prefetch" href="/assets/js/31.ad2cd9bb.js"><link rel="prefetch" href="/assets/js/32.a95cadce.js"><link rel="prefetch" href="/assets/js/33.47b3d2c3.js"><link rel="prefetch" href="/assets/js/34.b9efbd2d.js"><link rel="prefetch" href="/assets/js/35.94224372.js"><link rel="prefetch" href="/assets/js/36.2b0e08c0.js"><link rel="prefetch" href="/assets/js/37.33890f8c.js"><link rel="prefetch" href="/assets/js/38.ec0abd3c.js"><link rel="prefetch" href="/assets/js/39.d21c823a.js"><link rel="prefetch" href="/assets/js/4.143ff602.js"><link rel="prefetch" href="/assets/js/40.d6b37bb6.js"><link rel="prefetch" href="/assets/js/41.2569cccd.js"><link rel="prefetch" href="/assets/js/43.8a043ac2.js"><link rel="prefetch" href="/assets/js/44.b2d2eecb.js"><link rel="prefetch" href="/assets/js/45.9d8bc85e.js"><link rel="prefetch" href="/assets/js/46.1c103e0c.js"><link rel="prefetch" href="/assets/js/47.2b9168b9.js"><link rel="prefetch" href="/assets/js/48.23b5a6c4.js"><link rel="prefetch" href="/assets/js/5.337aef0a.js"><link rel="prefetch" href="/assets/js/6.bccc6fe4.js"><link rel="prefetch" href="/assets/js/7.ddf68107.js"><link rel="prefetch" href="/assets/js/8.26b1ac41.js"><link rel="prefetch" href="/assets/js/9.5b255363.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ee8340de.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">阿木林的博客</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link router-link-active">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vueSourceCode/ListenerToVar.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/ListenerToVar.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link router-link-active">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vueSourceCode/ListenerToVar.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/ListenerToVar.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue 源码解读</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/vueSourceCode/ListenerToVar.html" aria-current="page" class="active sidebar-link">监听数据变化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/ListenerToVar.html#object的变化侦测" class="sidebar-link">object的变化侦测</a></li><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/ListenerToVar.html#谁用到了数据-谁就是依赖" class="sidebar-link">谁用到了数据，谁就是依赖</a></li><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/ListenerToVar.html#array的变化侦测" class="sidebar-link">Array的变化侦测</a></li></ul></li><li><a href="/zh/vueSourceCode/VirtualDom.html" class="sidebar-link">虚拟Dom</a></li><li><a href="/zh/vueSourceCode/TemplateCompilation.html" class="sidebar-link">模板编译篇</a></li><li><a href="/zh/vueSourceCode/LifeCycle.html" class="sidebar-link">生命周期篇</a></li><li><a href="/zh/vueSourceCode/Instance.html" class="sidebar-link">实例方法篇</a></li><li><a href="/zh/vueSourceCode/Api.html" class="sidebar-link">全局API篇</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="监听数据变化"><a href="#监听数据变化" class="header-anchor">#</a> 监听数据变化</h1> <h2 id="object的变化侦测"><a href="#object的变化侦测" class="header-anchor">#</a> object的变化侦测</h2> <p>js 提供 Object.defineProperty( )方法来监听数据是否有被读取或者修改。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> car <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> val <span class="token operator">=</span> <span class="token number">3000</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>car<span class="token punctuation">,</span> <span class="token string">'price'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'price属性被读取了'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> val
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'price属性被修改了'</span><span class="token punctuation">)</span>
+    val <span class="token operator">=</span> newVal
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+car<span class="token punctuation">.</span>price
+price属性被读取了
+<span class="token number">3000</span>
+
+car<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">4000</span>
+price属性被修改了
+<span class="token number">4000</span>
+</code></pre></div><p>但当我们向Object数据里添加一对新的key/value或删除一对已有的key/value时，它是无法观测到的。导致当我们对Object数据添加或删除值时，无法通知依赖，无法驱动视图进行响应式更新。</p> <p>为了解决这个问题，Vue增加了两个全局API：Vue.set和Vue.delete。</p> <h2 id="谁用到了数据-谁就是依赖"><a href="#谁用到了数据-谁就是依赖" class="header-anchor">#</a> 谁用到了数据，谁就是依赖</h2> <p>谁依赖了这个数据，就放入依赖数组，并通过建立watch类（watch类就是这个谁）从而谁用到了数据，谁就是依赖，就会被创建一个Watch实例。当数据发生改变时，不用直接通知依赖，而是通过对应的Watch实例，由Watch去通知真正的视图。</p> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>在getter中收集依赖，在setter中通知依赖更新，以及封装了依赖管理器Dep，用于储存收集到的依赖。</p> <p>为了每一个依赖都创建了一个Watcher实例，当数据变化，通知Watcher实例，由Watcher实例去做真实的更新操作。</p></div> <div class="custom-block tip"><p class="custom-block-title">整个流程：</p> <ol><li><p>Data通过observer转换成了getter/setter的形式来追踪变化。</p></li> <li><p>当外界通过Watcher读取数据时，会触发getter从而将Watcher添加到依赖中。</p></li> <li><p>当数据发生变化时，会触发setter，从而向Dep中的依赖（即Watcher）发送通知。</p></li> <li><p>Watcher接收到通知后，会向外界发送通知，变化通知到外界后可能会触发视图更新，也有可能触发用户的某个回调函数等。</p></li></ol></div> <h2 id="array的变化侦测"><a href="#array的变化侦测" class="header-anchor">#</a> Array的变化侦测</h2> <p>array无法使用<code>Object.defineProperty( )</code>方法，但是依旧可以在getter里收集依赖。平时开发时，array也会被放在一个data的对象中。</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+    <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">newPush</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'arr被修改了'</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    arr<span class="token punctuation">.</span><span class="token function">newPush</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+</code></pre></div><p>增加一个newPush方法，当我们添加数组时，就会得知值被添加了。使用拦截器在使用原生方法之前来告知这个array被改变了。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/zh/vueSourceCode/VirtualDom.html">
+        虚拟Dom
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.da8be8ea.js" defer></script><script src="/assets/js/2.ddb1122e.js" defer></script><script src="/assets/js/42.9bb9972e.js" defer></script>
+  </body>
+</html>

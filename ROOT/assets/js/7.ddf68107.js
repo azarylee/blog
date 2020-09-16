@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{389:function(n,e,t){"use strict";t.r(e);t(48);var s={props:["name"],mounted:function(){console.log(this.name)}},i=t(25),o=Object(i.a)(s,(function(){var n=this.$createElement,e=this._self._c||n;return e("div",[e("span",[this._v("name: "+this._s(this.name))])])}),[],!1,null,"5f66eb51",null);e.default=o.exports}}]);

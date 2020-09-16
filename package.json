@@ -1,0 +1,22 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "vuepress": "^1.5.4",
+    "vuepress-plugin-comment": "^0.7.3"
+  },
+  "dependencies": {
+    "vuepress-theme-yuu": "^2.3.0"
+  }
+}

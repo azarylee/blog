@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目结构 | 阿木林的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小菜鸟">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="author" content="Yijun <liyijun430.com>">
+    <link rel="preload" href="/assets/css/0.styles.ee8340de.css" as="style"><link rel="preload" href="/assets/js/app.da8be8ea.js" as="script"><link rel="preload" href="/assets/js/2.ddb1122e.js" as="script"><link rel="preload" href="/assets/js/30.a19015f4.js" as="script"><link rel="prefetch" href="/assets/js/10.f82c1746.js"><link rel="prefetch" href="/assets/js/11.b19841a5.js"><link rel="prefetch" href="/assets/js/12.05213fd2.js"><link rel="prefetch" href="/assets/js/13.15e89dd7.js"><link rel="prefetch" href="/assets/js/14.8f6c383f.js"><link rel="prefetch" href="/assets/js/15.4576b73e.js"><link rel="prefetch" href="/assets/js/16.fb54c248.js"><link rel="prefetch" href="/assets/js/17.f308c0d3.js"><link rel="prefetch" href="/assets/js/18.ef35d2e1.js"><link rel="prefetch" href="/assets/js/19.4420e2c4.js"><link rel="prefetch" href="/assets/js/20.c65be6eb.js"><link rel="prefetch" href="/assets/js/21.acf9b508.js"><link rel="prefetch" href="/assets/js/22.072b2d35.js"><link rel="prefetch" href="/assets/js/23.9938e155.js"><link rel="prefetch" href="/assets/js/24.ddf82dc3.js"><link rel="prefetch" href="/assets/js/25.63675316.js"><link rel="prefetch" href="/assets/js/26.3536f4c8.js"><link rel="prefetch" href="/assets/js/27.df548c77.js"><link rel="prefetch" href="/assets/js/28.fbd1b08b.js"><link rel="prefetch" href="/assets/js/29.f73fc9dd.js"><link rel="prefetch" href="/assets/js/3.b0754abc.js"><link rel="prefetch" href="/assets/js/31.ad2cd9bb.js"><link rel="prefetch" href="/assets/js/32.a95cadce.js"><link rel="prefetch" href="/assets/js/33.47b3d2c3.js"><link rel="prefetch" href="/assets/js/34.b9efbd2d.js"><link rel="prefetch" href="/assets/js/35.94224372.js"><link rel="prefetch" href="/assets/js/36.2b0e08c0.js"><link rel="prefetch" href="/assets/js/37.33890f8c.js"><link rel="prefetch" href="/assets/js/38.ec0abd3c.js"><link rel="prefetch" href="/assets/js/39.d21c823a.js"><link rel="prefetch" href="/assets/js/4.143ff602.js"><link rel="prefetch" href="/assets/js/40.d6b37bb6.js"><link rel="prefetch" href="/assets/js/41.2569cccd.js"><link rel="prefetch" href="/assets/js/42.9bb9972e.js"><link rel="prefetch" href="/assets/js/43.8a043ac2.js"><link rel="prefetch" href="/assets/js/44.b2d2eecb.js"><link rel="prefetch" href="/assets/js/45.9d8bc85e.js"><link rel="prefetch" href="/assets/js/46.1c103e0c.js"><link rel="prefetch" href="/assets/js/47.2b9168b9.js"><link rel="prefetch" href="/assets/js/48.23b5a6c4.js"><link rel="prefetch" href="/assets/js/5.337aef0a.js"><link rel="prefetch" href="/assets/js/6.bccc6fe4.js"><link rel="prefetch" href="/assets/js/7.ddf68107.js"><link rel="prefetch" href="/assets/js/8.26b1ac41.js"><link rel="prefetch" href="/assets/js/9.5b255363.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ee8340de.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">阿木林的博客</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/3k-game/structure/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/3k-game/structure/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/3k-game/structure/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/3k-game/structure/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>3K 游戏</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/3k-game/structure/" aria-current="page" class="active sidebar-link">项目结构</a></li><li><a href="/zh/3k-game/fish.html" class="sidebar-link">捕鱼游戏</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目结构"><a href="#项目结构" class="header-anchor">#</a> 项目结构</h1> <p>+—-server.js (入口文件)<br>
+    +-- serv.js (建立http对象并继承EventEmitter)<br>
+        +--index.html<br>
+        (引入 boot.js, include.js 再导入 require.js)<br>
+            |-- require.js</p> <div class="custom-block tip"><p class="custom-block-title">第一个加载</p> <p>RequireJS, 引入javascript模块加载器。在ES6出现之前，为了支持JS模块化，出现的语言工具。</p></div> <p>            |-- app-config.js</p> <div class="custom-block tip"><p class="custom-block-title">第二个加载</p> <p>gbx—global context 全局设置</p></div> <p>            |-- libs/layaair/laya.core.js<br>
+            |-- libs/layaair/laya.webgl.js<br>
+            |-- libs/layaair/laya.ui.js<br>
+            |-- libs/layaair/laya.ani.js<br>
+            |-- libs/layaair/laya.particle.js<br>
+            |-- libs/layaair/laya.filter.js<br>
+            |-- libs/gtea/gtea.js</p> <div class="custom-block tip"><p class="custom-block-title">第三个加载</p> <p>gtea 交互设置, 在main之前加载以便之后gbx/net/connector创建新对象调用connect方法。接受信息并解码。
+_onMessage 编译信息后给到前端</p></div> <p>            |-- libs/cordova/cordova.js</p> <div class="custom-block tip"><p class="custom-block-title">第四个加载</p> <p>cordova 生产跨平台应用</p></div> <p>            +-- main.js</p> <div class="custom-block tip"><p class="custom-block-title">第五个加载</p> <p>main.js 项目主要文件</p></div> <p>                |-- conf/system (声明系统全局常量)<br>
+                |-- gbx/render/stage (stage舞台初始化设置)<br>
+                |-- gbx/render/texture<br>
+                |-- gbx/render/loader<br>
+(识别并载入文件:<br> <code>{ als：&quot;atlas&quot;, jpeg: &quot;image&quot;, jpg: &quot;image&quot;, json：&quot;json&quot;, mp3: &quot;sound&quot;, agg: &quot;sound&quot;, part：&quot;json&quot;, png: &quot;image&quot;, txt: &quot;text&quot;, wav: &quot;sound&quot;, xml: &quot;xml&quot; }</code>
+)<br>
+                +-- gbx/render/schema<br>
+                  |-- gbx/class (简单的JS继承第三方包)<br>
+                  |-- gbx/render/display/sprite (图片，文字的基本类)<br>
+                    +-- gbx/render/display/node (这个文件是针对laya对象再次进行封装的最基础类型，同时增加了一些属性)<br>
+                      |-- gbx/cclass (监控方法)<br>
+                    |-- gbx/render/tween (基本动态效果)<br>
+                    |-- gbx/render/texture (动画效果方法)<br>
+                  +-- gbx/render/display/text  (文字类，文字的设置，继承sprite类)<br>
+                    |-- gbx/render/display/sprite<br>
+                  +-- gbx/render/ui/button (继承component类)<br>
+                    |-- gbx/render/ui/component<br>
+                    |-- gbx/render/texture (设置button背景图片)<br>
+                    |-- gbx/render/display/sprite (设置button文字图片)<br>
+                |-- gbx/debug (Log文件)<br>
+                  +-- gbx/bridge<br>
+                    |-- gbx/hubs (添加监听subscription，push方法)<br>
+                    |-- gbx/util (工具方法)<br>
+                |-- gbx/bridge<br>
+                |-- gbx/hubs<br>
+                |-- gbx/net/connector (设置服务器， 建立连接)<br>
+                |-- gbx/render/display/sprite<br>
+                |-- gbx/render/display/text<br>
+                +-- comm/helper/scene_mgr<br>
+                  |-- conf/game (游戏设置配置)<br>
+                  |-- major/login/resource (登录后的一些信息，类似奖品……）<br>
+                  |-- comm/helper/sound_mgr (加载声音文件)<br>
+                  |-- gbx/render/texture<br>
+                  |-- gbx/render/loader<br>
+                  |-- gbx/render/stage<br>
+                  |-- gbx/hubs<br>
+                  |-- comm/helper/provider<br>
+                |-- comm/helper/sound_mgr<br>
+                |-- comm/helper/account_mgr (account center, manage account data)<br>
+                +-- comm/helper/provider</p> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>_getGameList 方法加载游戏和设置游戏顺序。
+_super 加载游戏resource.js及install.js</p></div> <p>                  |-- comm/base/provider (底层provider属性及方法)<br>
+                  |-- gbx/render/display/text<br>
+                  |-- gbx/util<br>
+                  |-- gbx/hubs<br>
+                  |-- comm/ui/top_message<br>
+                |-- comm/ui/sound_button (按钮声音加载)<br>
+                |-- gbx/device (判断device)<br>
+                |-- comm/helper/tkda_mgr (网上购物)<br>
+                |-- app-config</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/zh/3k-game/fish.html">
+        捕鱼游戏
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.da8be8ea.js" defer></script><script src="/assets/js/2.ddb1122e.js" defer></script><script src="/assets/js/30.a19015f4.js" defer></script>
+  </body>
+</html>

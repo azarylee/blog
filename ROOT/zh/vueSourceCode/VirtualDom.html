@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>虚拟DOM | 阿木林的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小菜鸟">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="author" content="Yijun <liyijun430.com>">
+    <link rel="preload" href="/assets/css/0.styles.ee8340de.css" as="style"><link rel="preload" href="/assets/js/app.da8be8ea.js" as="script"><link rel="preload" href="/assets/js/2.ddb1122e.js" as="script"><link rel="preload" href="/assets/js/45.9d8bc85e.js" as="script"><link rel="prefetch" href="/assets/js/10.f82c1746.js"><link rel="prefetch" href="/assets/js/11.b19841a5.js"><link rel="prefetch" href="/assets/js/12.05213fd2.js"><link rel="prefetch" href="/assets/js/13.15e89dd7.js"><link rel="prefetch" href="/assets/js/14.8f6c383f.js"><link rel="prefetch" href="/assets/js/15.4576b73e.js"><link rel="prefetch" href="/assets/js/16.fb54c248.js"><link rel="prefetch" href="/assets/js/17.f308c0d3.js"><link rel="prefetch" href="/assets/js/18.ef35d2e1.js"><link rel="prefetch" href="/assets/js/19.4420e2c4.js"><link rel="prefetch" href="/assets/js/20.c65be6eb.js"><link rel="prefetch" href="/assets/js/21.acf9b508.js"><link rel="prefetch" href="/assets/js/22.072b2d35.js"><link rel="prefetch" href="/assets/js/23.9938e155.js"><link rel="prefetch" href="/assets/js/24.ddf82dc3.js"><link rel="prefetch" href="/assets/js/25.63675316.js"><link rel="prefetch" href="/assets/js/26.3536f4c8.js"><link rel="prefetch" href="/assets/js/27.df548c77.js"><link rel="prefetch" href="/assets/js/28.fbd1b08b.js"><link rel="prefetch" href="/assets/js/29.f73fc9dd.js"><link rel="prefetch" href="/assets/js/3.b0754abc.js"><link rel="prefetch" href="/assets/js/30.a19015f4.js"><link rel="prefetch" href="/assets/js/31.ad2cd9bb.js"><link rel="prefetch" href="/assets/js/32.a95cadce.js"><link rel="prefetch" href="/assets/js/33.47b3d2c3.js"><link rel="prefetch" href="/assets/js/34.b9efbd2d.js"><link rel="prefetch" href="/assets/js/35.94224372.js"><link rel="prefetch" href="/assets/js/36.2b0e08c0.js"><link rel="prefetch" href="/assets/js/37.33890f8c.js"><link rel="prefetch" href="/assets/js/38.ec0abd3c.js"><link rel="prefetch" href="/assets/js/39.d21c823a.js"><link rel="prefetch" href="/assets/js/4.143ff602.js"><link rel="prefetch" href="/assets/js/40.d6b37bb6.js"><link rel="prefetch" href="/assets/js/41.2569cccd.js"><link rel="prefetch" href="/assets/js/42.9bb9972e.js"><link rel="prefetch" href="/assets/js/43.8a043ac2.js"><link rel="prefetch" href="/assets/js/44.b2d2eecb.js"><link rel="prefetch" href="/assets/js/46.1c103e0c.js"><link rel="prefetch" href="/assets/js/47.2b9168b9.js"><link rel="prefetch" href="/assets/js/48.23b5a6c4.js"><link rel="prefetch" href="/assets/js/5.337aef0a.js"><link rel="prefetch" href="/assets/js/6.bccc6fe4.js"><link rel="prefetch" href="/assets/js/7.ddf68107.js"><link rel="prefetch" href="/assets/js/8.26b1ac41.js"><link rel="prefetch" href="/assets/js/9.5b255363.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ee8340de.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">阿木林的博客</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link router-link-active">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vueSourceCode/VirtualDom.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/VirtualDom.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zh/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/" class="nav-link router-link-active">
+  Vue源码解读
+</a></li><li class="dropdown-item"><!----> <a href="/zh/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/zh/graphql/" class="nav-link">
+  GraphQl
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/frontEnd/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vueSourceCode/VirtualDom.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/vueSourceCode/VirtualDom.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue 源码解读</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/vueSourceCode/ListenerToVar.html" class="sidebar-link">监听数据变化</a></li><li><a href="/zh/vueSourceCode/VirtualDom.html" aria-current="page" class="active sidebar-link">虚拟Dom</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/VirtualDom.html#vue中的虚拟dom" class="sidebar-link">Vue中的虚拟DOM</a></li><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/VirtualDom.html#vue中的dom-diff" class="sidebar-link">Vue中的DOM-Diff</a></li><li class="sidebar-sub-header"><a href="/zh/vueSourceCode/VirtualDom.html#更新子节点" class="sidebar-link">更新子节点</a></li></ul></li><li><a href="/zh/vueSourceCode/TemplateCompilation.html" class="sidebar-link">模板编译篇</a></li><li><a href="/zh/vueSourceCode/LifeCycle.html" class="sidebar-link">生命周期篇</a></li><li><a href="/zh/vueSourceCode/Instance.html" class="sidebar-link">实例方法篇</a></li><li><a href="/zh/vueSourceCode/Api.html" class="sidebar-link">全局API篇</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="虚拟dom"><a href="#虚拟dom" class="header-anchor">#</a> 虚拟DOM</h1> <h2 id="vue中的虚拟dom"><a href="#vue中的虚拟dom" class="header-anchor">#</a> Vue中的虚拟DOM</h2> <p>VNode类就是用js来描述一个真实的DOM节点的类。通过这个类，我们就可以实例化出不同类型的虚拟DOM节点。有了数据变化前后的VNode，我们才能进行后续的DOM-Diff找出差异，最终做到只更新有差异的视图，从而达到尽可能少的操作真实DOM的目的，以节省性能。</p> <h2 id="vue中的dom-diff"><a href="#vue中的dom-diff" class="header-anchor">#</a> Vue中的DOM-Diff</h2> <p>在Vue中，把 DOM-Diff过程叫做patch过程。patch,意为“补丁”，即指对旧的VNode修补，打补丁从而得到新的VNode，非常形象。本质是以新的VNode为基准，改造旧的oldVNode使之成为跟新的VNode一样，这就是patch过程要干的事。总共干了三件事，分别是：创建节点，删除节点，更新节点。</p> <h2 id="更新子节点"><a href="#更新子节点" class="header-anchor">#</a> 更新子节点</h2> <div class="custom-block tip"><p class="custom-block-title">有四种情况：</p> <ol><li><p>创建子节点： 没有相同的子节点</p></li> <li><p>删除子节点： 新的里没有</p></li> <li><p>移动子节点： 找到相同，但所处位置不同</p></li> <li><p>更新节点： 找到相同，并位置相同，把新的替换旧的</p></li></ol></div> <p>不用双层嵌套 新套旧的遍历循环比对方法，如果节点太多很难优化<br>
+使用新前与旧前对比相同更新再移动至后一个<br>
+如果不同，用新后和旧后对比，相同更新节点<br>
+如果不同，用未处理过的新后和未处理过的旧前对比，相同进行更新，更新完再把节点移动到新后所在的位置<br>
+如果还是不同，用未处理过的新前后未处理过得旧后对比，相同更新，更新完再将这个旧后放到新前的位置<br>
+如果四种方式还不行，就再循环通过之前的四种方式再查找</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/vueSourceCode/ListenerToVar.html" class="prev">
+        监听数据变化
+      </a></span> <span class="next"><a href="/zh/vueSourceCode/TemplateCompilation.html">
+        模板编译篇
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.da8be8ea.js" defer></script><script src="/assets/js/2.ddb1122e.js" defer></script><script src="/assets/js/45.9d8bc85e.js" defer></script>
+  </body>
+</html>
