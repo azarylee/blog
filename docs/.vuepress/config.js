@@ -6,9 +6,9 @@ module.exports = {
                 choosen: 'valine', 
                 // options选项中的所有参数，会传给Valine的配置
                 options: {
-                el: '#valine-vuepress-comment',
-                appId: 'LpVsJXPC1FAUOs5Bm26DQG8K-MdYXbMMI',
-                appKey: 'zcveekQKzTRJRx0G1SVLtRFn'
+                    el: '#valine-vuepress-comment',
+                    appId: 'LpVsJXPC1FAUOs5Bm26DQG8K-MdYXbMMI',
+                    appKey: 'zcveekQKzTRJRx0G1SVLtRFn'
                 }
             }
         ]
@@ -49,7 +49,7 @@ module.exports = {
                             { text: "Vue", link: "/vue/" },
                             { text: "Vue Source Code", link: "/vueSourceCode/" },
                             { text: "React", link: "/react/" },
-                            { text: "GraphQl", link: "/graphql/" },
+                            { text: "GraphQL", link: "/graphql/" },
                         ]
                     },
                     // { text: "Blog", link: "/zh/frontEnd/" },
@@ -111,7 +111,7 @@ module.exports = {
                             { text: "Vue", link: "/zh/vue/" },
                             { text: "Vue源码解读", link: "/zh/vueSourceCode/" },
                             { text: "React", link: "/zh/react/" },
-                            { text: "GraphQl", link: "/zh/graphql/" },
+                            { text: "GraphQL", link: "/zh/graphql/" },
                         ]
                     },
                     { text: "博客", link: "/zh/frontEnd/" },
