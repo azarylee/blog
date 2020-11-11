@@ -87,6 +87,15 @@ module.exports = {
                             ],
                         }
                     ],
+                    "/react/": [
+                        {
+                            title: "Learn React Make Better",
+                            collapsable: false,
+                            children: [
+                                { title: "Create a Project", path: "/react/CreateProject" },
+                            ],
+                        }
+                    ],
                     "/3k-game/": [
                         {
                             title: "3K GAMES",
@@ -146,6 +155,15 @@ module.exports = {
                                 { title: "生命周期篇", path: "/zh/vueSourceCode/LifeCycle"},
                                 { title: "实例方法篇", path: "/zh/vueSourceCode/Instance"},
                                 { title: "全局API篇", path: "/zh/vueSourceCode/Api"}
+                            ],
+                        }
+                    ],
+                    "/zh/react/": [
+                        {
+                            title: "学习React，不一样的编程",
+                            collapsable: false,
+                            children: [
+                                { title: "创建项目", path: "/zh/react/CreateProject" },
                             ],
                         }
                     ],
